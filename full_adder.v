@@ -1,0 +1,14 @@
+// this is the full adder code
+`timescale 1ns/1ps
+module full_adder (
+    input  a,
+    input  b,
+    input  cin,
+    output sum,
+    output cout
+);
+
+    assign sum  = a ^ b ^ cin;
+    assign cout = (a & b) | (b & cin) | (a & cin);
+
+endmodule
